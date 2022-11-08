@@ -1,0 +1,22 @@
+.header {
+  @apply inline-flex justify-start;
+  @apply sticky top-0 z-40;
+  @apply w-auto;
+  @apply p-8;
+}
+
+.logo {
+  @apply h-16 w-auto;
+}
+
+.logo > svg {
+  @apply h-full w-full;
+  @apply drop-shadow-sm;
+}
+
+.grid {
+  @apply relative;
+  @apply mx-auto;
+  @apply max-w-full;
+  @apply flex-1;
+}

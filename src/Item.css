@@ -1,0 +1,73 @@
+.item {
+  @apply border-2 border-transparent;
+  @apply overflow-hidden;
+  @apply transition;
+  @apply hover:z-10 hover:shadow-2xl;
+}
+
+.item summary {
+  @apply block;
+  @apply w-full h-full;
+  @apply opacity-60;
+  @apply transition-all;
+  @apply hover:opacity-100;
+  @apply focus:outline-none focus:opacity-100;
+}
+
+.item article {
+  @apply mx-auto;
+  @apply px-8 py-8 lg:py-16;
+  @apply max-w-4xl;
+  @apply text-white;
+  @apply text-xl lg:text-4xl;
+}
+
+.item summary > img {
+  @apply object-cover;
+  @apply w-full h-full;
+}
+
+.item[open] {
+  @apply !inset-0;
+  @apply !fixed z-20;
+  @apply !w-auto !h-auto;
+  @apply overflow-auto;
+  @apply max-h-screen max-w-full;
+  @apply bg-black/80;
+}
+
+.item[open] summary {
+  @apply opacity-100;
+  @apply h-auto;
+  @apply hover:p-0;
+  @apply focus:p-0;
+}
+
+.item[open] summary > img {
+  @apply object-contain;
+  @apply w-full h-full;
+}
+
+.item nav {
+  @apply p-8;
+  @apply flex justify-end gap-4;
+}
+
+.item .button {
+  @apply w-12 h-12;
+  @apply text-white;
+}
+
+.item .button svg {
+  @apply w-full h-full;
+  @apply fill-current;
+}
+
+.item summary .button {
+  @apply fixed right-8 top-8 z-50;
+  @apply hidden;
+}
+
+.item[open] summary .button {
+  @apply block;
+}
